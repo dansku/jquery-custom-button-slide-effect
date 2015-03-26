@@ -1,5 +1,16 @@
+/*
+
+	if you want to change the speed 
+	
+*/
+
 jQuery(document).ready(function($) {
-var crossTime = 300; // rotate timer
+
+/* Variables */
+
+var crossTime = 300; // Rotate timer
+var slideSpeed = "slow"; // jQuery slide speed
+
 	$( ".expand_button_slide" ).click(function() {
 		var degree = getRotationDegrees($(this).children("span"));
 		if(degree == 90) { 
@@ -12,12 +23,12 @@ var crossTime = 300; // rotate timer
 			$(this).children("span").css("color", "#9b2631");
 		}
 		$(this).children("span").transition({ rotate: degree,  duration: crossTime });
-		$(this).siblings("#slider_div").slideToggle('slow');
+		$(this).siblings("#slider_div").slideToggle(slideSpeed);
 	});
  
 	//xbutton click
 	$( ".close_circle" ).click(function() {
-		$(this).parent("#slider_div").slideToggle('slow');
+		$(this).parent("#slider_div").slideToggle(slideSpeed);
 		$(this).parent().siblings(".expand_button_slide").css("border-color", "#142330");
 		$(this).parent().siblings(".expand_button_slide").children("span").css("color", "#142330");
 		$(this).parent().siblings(".expand_button_slide").children("span").transition({ rotate: 45,  duration: crossTime });
