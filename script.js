@@ -1,15 +1,14 @@
 /*
 
-	if you want to change the speed 
+	www.danielandrade.net
 	
 */
 
 jQuery(document).ready(function($) {
 
-/* Variables */
-
-var crossTime = 300; // Rotate timer
-var slideSpeed = "fast"; // jQuery slide speed
+	/* Variables */
+	var crossTime = 300; // Rotate timer
+	var slideSpeed = "fast"; // jQuery slide speed
 
 	$( ".expand_button_slide" ).click(function() {
 		var degree = getRotationDegrees($(this).find(".button_close"));
@@ -30,8 +29,8 @@ var slideSpeed = "fast"; // jQuery slide speed
 	$( ".close_circle" ).click(function() {
 		$(this).parent("#slider_div").slideToggle(slideSpeed);
 		$(this).parent().siblings(".expand_button_slide").css("border-color", "#142330");
-		$(this).parent().siblings(".expand_button_slide").children("span").css("color", "#142330");
-		$(this).parent().siblings(".expand_button_slide").children("span").transition({ rotate: 45,  duration: crossTime });
+		$(this).parent().siblings(".expand_button_slide").children("p").children(".button_close").css("color", "#142330");
+		$(this).parent().siblings(".expand_button_slide").children("p").children(".button_close").transition({ rotate: 45,  duration: crossTime });
 	});
 });
  
