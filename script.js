@@ -9,20 +9,20 @@ jQuery(document).ready(function($) {
 /* Variables */
 
 var crossTime = 300; // Rotate timer
-var slideSpeed = "slow"; // jQuery slide speed
+var slideSpeed = "fast"; // jQuery slide speed
 
 	$( ".expand_button_slide" ).click(function() {
-		var degree = getRotationDegrees($(this).children("span"));
+		var degree = getRotationDegrees($(this).find(".button_close"));
 		if(degree == 90) { 
 			degree = 45;
 			$(this).css("border-color", "#142330");
-			$(this).children("span").css("color", "#142330");
+			$(this).find(".button_close").css("color", "#142330");
 		} else { 
 			degree = 90;
 			$(this).css("border-color", "#9b2631");
-			$(this).children("span").css("color", "#9b2631");
+			$(this).find(".button_close").css("color", "#9b2631");
 		}
-		$(this).children("span").transition({ rotate: degree,  duration: crossTime });
+		$(this).find(".button_close").transition({ rotate: degree,  duration: crossTime });
 		$(this).siblings("#slider_div").slideToggle(slideSpeed);
 	});
  

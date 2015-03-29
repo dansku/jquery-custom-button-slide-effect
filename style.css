@@ -25,20 +25,36 @@
 }
  
 .expand_button {
-  width: 300px;
+  width: 91%;
   height: 30px;
   border: 1px solid #142330;
-  padding: 8px 0 0 15px;
+  padding: 0 4%;
   cursor: pointer;
+  height: 40px;
 }
 .expand_button span {
   color: #142330;
 }
+.expand_button>p {
+  line-height: 50%;
+}
 .expand_button .button_close {
   float: right;
-  margin-right: 20px;
   display: block;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  font-size: 90%;
+}
+#slider_div > ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+#slider_div>ul>li {
+  margin-bottom: 20px;
+}
+#slider_div>ul>li p {
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
